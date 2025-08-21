@@ -14,7 +14,7 @@ let ufoInterval;
 let bossShotInterval;
 let boss = null;
 let bossShots = [];
-let isGameWon = false; 
+let isGameWon = false; // NEU: Flag für den Spiel-Zustand
 
 /* Definition des Raketenobjekts */
 let rocket = {
@@ -64,13 +64,6 @@ function togglePause() {
 function startGame() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-
-    // Canvas-Größe an das Browserfenster anpassen
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    // Raketenposition anpassen, damit sie mittig auf der Y-Achse startet
-    rocket.y = (canvas.height / 2) - (rocket.height / 2);
     
     loadAllImages().then(() => {
         console.log("Alle Bilder geladen, Spiel startet.");
@@ -169,6 +162,7 @@ function checkForCollion() {
     }
 }
 
+
 function checkLevelUp() {
     if (boss) return;
 
@@ -205,8 +199,8 @@ function showWinPopup() {
 function update() {
     if (isPaused) return;
 
-    if (KEY_UP && rocket.y > 0) rocket.y -= 10;
-    if (KEY_DOWN && rocket.y + rocket.height < canvas.height) rocket.y += 10;
+    if (KEY_UP && rocket.y > 0) rocket.y -= 5;
+    if (KEY_DOWN && rocket.y + rocket.height < canvas.height) rocket.y += 5;
 
     ufos.forEach(ufo => {
         if (!ufo.hit) ufo.x -= ufo.speed;

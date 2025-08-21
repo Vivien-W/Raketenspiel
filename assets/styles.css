@@ -1,7 +1,14 @@
- /* Hintergrundfarbe des Spielfelds */
- canvas {
-    background-color: rgba(0, 0, 0, 0.8);
+ /* Hintergrund des Spielfelds */
+canvas {
+    display: block; /* Verhindert kleine Lücken unter dem Canvas */
 }
+
+body {
+    margin: 0; /* Entfernt den Standard-Außenrand */
+    padding: 0; /* Entfernt den Standard-Innenabstand */
+    overflow: hidden; /* Verhindert das Anzeigen von Scrollbalken */
+}
+
 /* Styling für das Gewinn-Popup */
 .popup {
     display: none;
@@ -15,6 +22,7 @@
     border-radius: 10px;
     text-align: center;
     font-size: 24px;
+    font-family: Arial, sans-serif;
     box-shadow: 0 0 20px white;
 }
 

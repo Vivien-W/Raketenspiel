@@ -11,7 +11,7 @@ So wird gespielt:
 ##Spielmechanik##
 
     Punkte: Sammle Punkte, indem du UFOs abschießt.
-    Level: Erreiche bestimmte Punktezahlen, um ins nächste Level aufzusteigen. Mit jedem Level werden die UFOs schneller und erscheinen häufiger. Du triffst auch auf verschiedene Arten von UFOs!
+    Level: Erreiche bestimmte Punktezahlen, um ins nächste Level aufzusteigen. Mit jedem Level werden die UFOs schneller und erscheinen häufiger. Du triffst auch auf verschiedene Arten von UFOs und einen Endgegner!
     Neustart: Kollidiert deine Rakete mit einem UFO, ist das Spiel vorbei und startet automatisch neu.
 
 ##Entwicklungsinformationen##
@@ -26,9 +26,10 @@ Dieses Spiel wurde als einfaches JavaScript-Projekt entwickelt und beinhaltet fo
 
 ##Video-Tutorial##
 
-Eine visuelle Einführung in das Spiel findest du hier:
+Das Spiel wurde in Anlehnung an das Tutorial von "Programmieren Lernen" erstellt:
 https://www.youtube.com/watch?v=eWLDAAMsD-c&ab_channel=Programmierenlernen
-Bildquellen
+
+##Bildquellen##
 
 Alle im Spiel verwendeten Grafiken sind "Free for use" unter der Pixabay Content License. Es wurde darauf geachtet, möglichst kleine Auflösungen zu verwenden, um die Ladezeiten zu optimieren.
 
@@ -36,5 +37,7 @@ Alle im Spiel verwendeten Grafiken sind "Free for use" unter der Pixabay Content
     Explosion ("Boom"): https://pixabay.com/vectors/explosion-detonation-explode-1615899/ (by @Chaos07)
     Rakete: https://pixabay.com/vectors/rocket-launch-spaceship-technology-312455/ (by @Clker-Free-Vector-Images)
     Schuss: https://pixabay.com/vectors/button-ball-green-157511/ (by @OpenClipart-Vectors)
+    Boss-Schuss: https://pixabay.com/vectors/ball-droplet-circle-glossy-round-145435/ 
     UFO (Typ 1): https://pixabay.com/vectors/ufo-unknown-alien-alie-1698553/ (by @janjf93)
     UFO (Typ 2): https://pixabay.com/vectors/alien-martian-cosmic-face-green-153542/
+    UFO (Endgegner): https://pixabay.com/vectors/alien-martian-space-creature-7217916/
