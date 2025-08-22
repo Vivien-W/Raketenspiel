@@ -69,7 +69,6 @@ function startGame() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Raketenposition anpassen, damit sie mittig auf der Y-Achse startet
     rocket.y = (canvas.height / 2) - (rocket.height / 2);
     
     loadAllImages().then(() => {
@@ -84,6 +83,7 @@ function startGame() {
     });
 }
 
+// Wichtig: zunächst müssen alle Bilder geladen werden, bevor das Spiel startet!
 function loadAllImages() {
     const imagesToLoad = [
         backgroundImage,
@@ -114,7 +114,7 @@ function checkForCollion() {
             rocket.img.src = 'assets/img/boom.png';
             console.log('Kollision!!!');
             ufos = ufos.filter(u => u != ufo);
-            // Spiel wird nach Kollision neu gestartet, es sei denn, man hat schon gewonnen
+            // Spiel wird nach Kollision neu gestartet
             if (!isGameWon) {
                 setTimeout(restartGame, 2000);
             }
@@ -160,7 +160,7 @@ function checkForCollion() {
                 rocket.y < shot.y + shot.height) {
                 rocket.img.src = 'assets/img/boom.png';
                 console.log("Rakete von Boss getroffen!");
-                // Spiel wird nach Kollision neu gestartet, es sei denn, man hat schon gewonnen
+                // Spiel wird nach Kollision neu gestartet
                 if (!isGameWon) {
                     setTimeout(restartGame, 2000);
                 }
@@ -202,6 +202,7 @@ function showWinPopup() {
     document.getElementById('winPopup').style.display = 'block';
 }
 
+ // Herzstück des Spiels: aktualisiert den Zustand aller Spielelemente
 function update() {
     if (isPaused) return;
 
@@ -233,7 +234,6 @@ function update() {
 
 
 function restartGame() {
-    // NEU: Wenn das Spiel bereits gewonnen wurde, breche ab
     if (isGameWon) {
         return;
     }
@@ -349,7 +349,6 @@ function checkForShoot() {
     }
 }
 
-/* Lädt die Bilder für den Hintergrund und die Rakete */
 function loadImages() {}
 
 /* Zeichnet das Spielfeld und alle Elemente */
